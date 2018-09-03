@@ -467,7 +467,7 @@ bsim_no_miss<-function(x, y, N, burn, grid.width=.5)
   completedatathetaci<-matrix(0, 2,3)
   completedatathetaci[1,]=as.matrix(quantile(storetheta[1,burn:N], c(0.025, .5,.975)))
   completedatathetaci[2,]=as.matrix(quantile(storetheta[2,burn:N], c(0.025, .5,.975)))
-  theta_est<-c(completedatathetaci[1,], completedatathetaci[2,])
+  theta_est<-rbind(completedatathetaci[1,], completedatathetaci[2,])
   
   coverprob1<- ifelse((quantile(storetheta[1,burn:N],0.025)<0.6154797) & (quantile(storetheta[1,burn:N],.975)>0.6154797),1,0)
   coverprob2<- ifelse((quantile(storetheta[2,burn:N],0.025)<0.7853982) & (quantile(storetheta[2,burn:N],.975)>0.7853982),1,0)
