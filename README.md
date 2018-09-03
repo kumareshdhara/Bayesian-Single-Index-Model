@@ -18,7 +18,7 @@
  grid.width grid width used for the grid search. A smaller value will make computation more accurate but more time consuming. 
  
 # Outputs
- theta_est Estimated credible intervals of two theta values 
+ theta_est Estimated 0.025, 0.5 and 0.975 percentiles of the two thetas. 
  storetheta Values of theta over N mcmc iterations. 
 
 
@@ -31,15 +31,24 @@
 bsim_miss_cov function has 5 inputs and they are described as follows. 
 #Inputs
 x Covariates p=3
+
 y Response
+
 N Number of MCMC iterations. 
+
 burn  Number of burn-ins+1
+
 grid.width  grid width used for the grid search. A smaller value will make computation more accurate but more time consuming. 
+
 #Outputs
 theta_est Estimated 0.025, 0.5 and 0.975 percentiles of the two thetas based on complete part of the data.
+
 thetaci Estimated 0.025, 0.5 and 0.975 percentiles after incorporating missing covariates.
+
 storetheta  Values of theta over N mcmc iterations. 
+
 weight  Contains weights of corresponding to storetheta values. 
+
 
 
 
