@@ -8,10 +8,15 @@
  bsim_no_miss function has 5 inputs and they are described as follows. 
 # Inputs
  x Covariates p=3
+ 
  y Response
+ 
  N Number of MCMC iterations. 
+ 
  burn Number of burn-ins+1
+ 
  grid.width grid width used for the grid search. A smaller value will make computation more accurate but more time consuming. 
+ 
 # Outputs
  theta_est Estimated credible intervals of two theta values 
  storetheta Values of theta over N mcmc iterations. 
